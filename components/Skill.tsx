@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 
 type Props = {
   directionLeft?: boolean;
+  name: string;
+  img: string;
 };
 
-function Skill({ directionLeft }: Props) {
+function Skill({ directionLeft, name, img }: Props) {
   return (
     <div className=" group relative flex cursor-pointer">
       <motion.img
@@ -16,8 +18,8 @@ function Skill({ directionLeft }: Props) {
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
         className=" rounded-full border border-gray-500 object-cover w-24 h-24"
-        src=""
-        alt=""
+        src={img}
+        alt={name}
       />
     </div>
   );

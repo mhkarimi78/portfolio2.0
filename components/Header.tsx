@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { hanieData } from "../asset/data";
 type Props = {};
 
 const Header = (props: Props) => {
@@ -23,18 +24,23 @@ const Header = (props: Props) => {
         className="flex flex-row items-center"
       >
         <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="gray"
+          url={hanieData.socialOne}
+          fgColor={hanieData.socialColor}
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="gray"
+          url={hanieData.socialTwo}
+          fgColor={hanieData.socialColor}
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="gray"
+          url={hanieData.socialThree}
+          fgColor={hanieData.socialColor}
+          bgColor="transparent"
+        />
+        <SocialIcon
+          url={hanieData.socialFour}
+          fgColor={hanieData.socialColor}
           bgColor="transparent"
         />
       </motion.div>
@@ -54,8 +60,17 @@ const Header = (props: Props) => {
         }}
         className="flex flex-row items-center text-gary-300 cursor-pointer"
       >
-        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <SocialIcon
+          network="email"
+          fgColor={hanieData.socialColor}
+          bgColor="transparent"
+        />
+        <p
+          className="uppercase hidden md:inline-flex text-sm"
+          style={{
+            color: `${hanieData.socialColor}`,
+          }}
+        >
           Get In Touch
         </p>
       </motion.div>

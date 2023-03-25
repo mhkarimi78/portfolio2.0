@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
+import { hanieData } from "../asset/data";
 
 type Props = {};
 
@@ -21,9 +22,9 @@ function Skills({}: Props) {
         Hover over a skill for currency proficiency
       </h3>
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
+        {hanieData.skills.map((res) => {
+          return <Skill key={res.name} name={res.name} img={res.img} />;
+        })}
       </div>
     </motion.div>
   );

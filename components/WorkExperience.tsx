@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
+import { hanieData } from "../asset/data";
 
 type Props = {};
 
@@ -16,10 +17,19 @@ function WorkExperience({}: Props) {
         Experience
       </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {hanieData.experience.map((res) => {
+          return (
+            <ExperienceCard
+              role={res.role}
+              place={res.place}
+              points={res.points}
+              start={res.start}
+              end={res.end}
+              skills={res.skills}
+              img={res.img}
+            />
+          );
+        })}
       </div>
     </motion.div>
   );
