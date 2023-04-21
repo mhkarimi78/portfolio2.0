@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { hanieData } from "../asset/data";
 
 type Props = {};
 
 function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,7 +17,7 @@ function Projects({}: Props) {
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-        {projects.map((project, key) => (
+        {hanieData.projects.map((project, key) => (
           <div
             key={key}
             className=" w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
@@ -30,21 +30,22 @@ function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src="https://www.croblanc.com/imgcdn/e65E9LCV2V9RmDday9nxde1_gta-dXJ5NClVAAKyWIg/fill/360/0/no/1/aHR0cHM6Ly9pbWcueW91dHViZS5jb20vdmkvWDFhaFhOWWtwTDgvbWF4cmVzZGVmYXVsdC5qcGc.webp"
-              alt=""
+              style={{
+                width: "50%",
+                height: "70%",
+              }}
+              src={project.img}
+              alt={project.name}
             />
             <div className=" space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className=" text-4xl font-semibold text-center">
-                <span className=" underline decoration-[#F7AB0A]/50">
+              <h4 className=" text-4xl font-semibold text-center text-blue-500">
+                <span className=" underline decoration-[#F7AB0A]/50 text-black">
                   Case Study of {key + 1}:
                 </span>{" "}
-                Amazon clone
+                <a href="https://github.com/mhkarimi78/Web3Paypal">{project.name}</a>
               </h4>
-              <p className=" text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                reprehenderit vero natus laboriosam molestiae commodi odio nemo
-                ab, molestias quos est, suscipit magni eveniet. Corrupti, ipsum
-                officia! Corrupti, delectus nemo!
+              <p className=" text-lg text-center md:text-left text-black">
+                {project.description}
               </p>
             </div>
           </div>
