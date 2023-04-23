@@ -38,7 +38,7 @@ function ExperienceCard({
         //   y: 0,
         // }}
         // viewport={{ once: true }}
-        className="w-22 h-22 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
+        className="w-22 h-22 rounded-full object-cover object-center"
         style={{
           width: 5,
           height: 5,

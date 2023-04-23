@@ -16,7 +16,10 @@ function Projects({}: Props) {
       <h3 className=" absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
+      "
+      >
         {hanieData.projects.map((project, key) => (
           <div
             key={key}
@@ -42,7 +45,9 @@ function Projects({}: Props) {
                 <span className=" underline decoration-[#F7AB0A]/50 text-black">
                   Case Study of {key + 1}:
                 </span>{" "}
-                <a href="https://github.com/mhkarimi78/Web3Paypal">{project.name}</a>
+                <a href="https://github.com/mhkarimi78/Web3Paypal">
+                  {project.name}
+                </a>
               </h4>
               <p className=" text-lg text-center md:text-left text-black">
                 {project.description}

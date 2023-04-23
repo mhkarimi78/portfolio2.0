@@ -2,6 +2,7 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { hanieData } from "../asset/data";
+import Link from "next/link";
 type Props = {};
 
 const Header = (props: Props) => {
@@ -44,36 +45,38 @@ const Header = (props: Props) => {
           bgColor="transparent"
         />
       </motion.div>
-      <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1,
-        }}
-        className="flex flex-row items-center text-gary-300 cursor-pointer"
-      >
-        <SocialIcon
-          network="email"
-          fgColor={hanieData.socialColor}
-          bgColor="transparent"
-        />
-        <p
-          className="uppercase hidden md:inline-flex text-sm"
-          style={{
-            color: `${hanieData.socialColor}`,
+      <Link href="#contact">
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
           }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="flex flex-row items-center text-gary-300 cursor-pointer"
         >
-          Get In Touch
-        </p>
-      </motion.div>
+          <SocialIcon
+            network="email"
+            fgColor={hanieData.socialColor}
+            bgColor="transparent"
+          />
+          <p
+            className="uppercase hidden md:inline-flex text-sm"
+            style={{
+              color: `${hanieData.socialColor}`,
+            }}
+          >
+            Get In Touch
+          </p>
+        </motion.div>
+      </Link>
     </header>
   );
 };
