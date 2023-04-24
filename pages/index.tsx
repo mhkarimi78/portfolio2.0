@@ -9,6 +9,7 @@ import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
 import { hanieData } from "../asset/data";
 import ContactMe from "../components/ContactMe";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -43,6 +44,17 @@ const Home: NextPage = () => {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <img
+              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              src="https://avatars.githubusercontent.com/u/69413612?s=96&v=4"
+              alt="mh"
+            />
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 };
