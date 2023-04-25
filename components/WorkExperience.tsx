@@ -17,7 +17,7 @@ function WorkExperience({}: Props) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Experience
       </h3>
-      <div className="w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 items-center mt-40">
         {hanieData.experience.map((res) => {
           return (
             <ExperienceCard

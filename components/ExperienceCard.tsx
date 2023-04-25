@@ -23,7 +23,11 @@ function ExperienceCard({
   img,
 }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg=[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-screen
+    w-[500px] md:w-[600px] 
+    xl:w-[800px] snap-center bg=[#292929] 
+    p-10 hover:opacity-100 opacity-40 
+    cursor-pointer transition-opacity duration-200 overflow-hidden">
       <Image
         // ?motion.img
         // initial={{
@@ -38,13 +42,19 @@ function ExperienceCard({
         //   y: 0,
         // }}
         // viewport={{ once: true }}
-        className="w-22 h-22 rounded-full object-cover object-center"
-        style={{
-          width: 5,
-          height: 5,
-        }}
-        width={800}
-        height={200}
+        className='rounded-full object-contain object-center'
+        // "
+        // w-22
+        //  h-22 
+        // object-cover 
+        // object-center
+        // "
+        // style={{
+        //   width: 50,
+        //   height: 50,
+        // }}
+        width={300}
+        height={300}
         src={img?.img}
         alt="afarinesh"
       />
