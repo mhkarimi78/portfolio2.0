@@ -21,7 +21,7 @@ function WorkExperience({}: Props) {
         {hanieData.experience.map((res) => {
           return (
             <ExperienceCard
-              key={res.img}
+              key={res?.role}
               role={res.role}
               place={res.place}
               points={res.points}

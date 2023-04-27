@@ -3,17 +3,28 @@ import { motion } from "framer-motion";
 import { hanieData } from "../asset/data";
 import Image from "next/image";
 
+type img = {
+  img: typeof import("*.jpg");
+};
+
+type skills = {
+  src: string;
+  alt: string;
+};
+
 type Props = {
+  key: string;
   place: string;
   role: string;
   points: string[];
   start: string;
   end: string;
-  skills: string[];
-  img: object;
+  skills: skills[];
+  img: img;
 };
 
 function ExperienceCard({
+  key,
   role,
   place,
   points,
@@ -23,11 +34,13 @@ function ExperienceCard({
   img,
 }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-screen
+    <article
+      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-screen
     w-[500px] md:w-[600px] 
     xl:w-[800px] snap-center bg=[#292929] 
     p-10 hover:opacity-100 opacity-40 
-    cursor-pointer transition-opacity duration-200 overflow-hidden">
+    cursor-pointer transition-opacity duration-200 overflow-hidden"
+    >
       <Image
         // ?motion.img
         // initial={{
@@ -42,11 +55,11 @@ function ExperienceCard({
         //   y: 0,
         // }}
         // viewport={{ once: true }}
-        className='rounded-full object-contain object-center'
+        className="rounded-full object-contain object-center"
         // "
         // w-22
-        //  h-22 
-        // object-cover 
+        //  h-22
+        // object-cover
         // object-center
         // "
         // style={{
@@ -77,7 +90,14 @@ function ExperienceCard({
         </h4>
         <div className="flex space-x-2 my-2">
           {skills?.map((res) => {
-            return <img className="h-10 w-10" src={res.src} alt={res.alt} />;
+            return (
+              <img
+                key={key}
+                className="h-10 w-10"
+                src={res?.src}
+                alt={res?.alt}
+              />
+            );
           })}
         </div>
         <p

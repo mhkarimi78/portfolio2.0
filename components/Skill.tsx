@@ -5,6 +5,7 @@ type Props = {
   directionLeft?: boolean;
   name: string;
   img: string;
+  percentage: string;
 };
 
 function Skill({ directionLeft, name, img, percentage }: Props) {

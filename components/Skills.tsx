@@ -25,12 +25,14 @@ function Skills({}: Props) {
       <div className="grid grid-cols-6 gap-2">
         {hanieData.skills.map((res) => {
           return (
-            <Skill
-              key={res.name}
-              name={res.name}
-              img={res.img}
-              percentage={res.percentage}
-            />
+            res != undefined && (
+              <Skill
+                key={res?.name}
+                name={res.name}
+                img={res?.img}
+                percentage={res?.percentage}
+              />
+            )
           );
         })}
       </div>
