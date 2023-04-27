@@ -361,9 +361,25 @@ export const hanieData = {
       percentage: "60%",
     },
     {
+      name: "Ganache",
+      img: "https://th.bing.com/th/id/OIP.Yh5JDXTM6RNOu800mqPM8AAAAA?pid=ImgDet&w=250&h=250&rs=1",
+      percentage: "80%",
+    },
+    ,
+    {
+      name: "Truffle",
+      img: "https://th.bing.com/th/id/R.d7484280eb920e25426fdd04dea76dce?rik=p8GvQm%2bJo%2bP8Kw&pid=ImgRaw&r=0",
+      percentage: "80%",
+    },
+    {
       name: "Mocha",
       img: "https://th.bing.com/th/id/R.0b96a835f7d1cda5fc84a707d344b41f?rik=tNc5QTZM9cytOQ&pid=ImgRaw&r=0",
       percentage: "60%",
+    },
+    {
+      name: "Ethers",
+      img: "https://th.bing.com/th/id/R.8127e9956f7041ceab4a0b108cb93d22?rik=Nw9iLa4Q73UaBQ&pid=ImgRaw&r=0",
+      percentage: "80%",
     },
     {
       name: "Git",
